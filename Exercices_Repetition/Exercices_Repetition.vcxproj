@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{86B871A0-0AB9-4B79-BEAC-FDA1AF75FF52}</ProjectGuid>
+    <ProjectGuid>{D282183C-A573-4428-AB33-A93DD0816AAB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>GradeBookWithInterface</RootNamespace>
+    <RootNamespace>Exercices_Repetition</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,13 +145,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GradeBook.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GradeBook.cpp" />
-    <ClCompile Include="GradeBookWithInterface.cpp" />
+    <ClCompile Include="Exercices_Repetition.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,10 +2,14 @@
 //
 
 #include "stdafx.h"
+#include "GradeBook.h"
 
 
 int main()
 {
-    return 0;
+	GradeBook myGradeBook("C++ Programing");
+
+	myGradeBook.displayMessage();
+	myGradeBook.determineClassAverage();
 }
 

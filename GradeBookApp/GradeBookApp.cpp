@@ -7,7 +7,7 @@
 
 int main()
 {
-	GradeBook myGradeBook("C++ Programing");
+	GradeBook myGradeBook("C++ Programing Language");
 
 	myGradeBook.displayMessage();
 	myGradeBook.determineClassAverage();

@@ -8,7 +8,13 @@ public:
 	void setCourseName(std::string);
 	std::string getCourseName() const;
 	void displayMessage() const;
-	void determineClassAverage() const;
+	void inputGrades();
+	void displayGradeReport() const;
 private:
 	std::string courseName;
+	unsigned int aCount;
+	unsigned int bCount;
+	unsigned int cCount;
+	unsigned int dCount;
+	unsigned int fCount;
 };

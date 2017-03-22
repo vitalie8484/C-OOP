@@ -1,15 +1,16 @@
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
 int main()
 {
-	 int i1 = 1;
-	 int i2 = 2;
-	 int i3 = 3;
-	 int i4 = 4;
+	bool b = false;
+	int n = 0;
 
+	if (n == 0) b = true; else b = false;
+	cout << b << endl;
 
-	cout << (i1+++i2+++i3) << endl;
+	b = !n;
+	cout << b << endl;
 }
- 

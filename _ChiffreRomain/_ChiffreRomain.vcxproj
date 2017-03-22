@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D282183C-A573-4428-AB33-A93DD0816AAB}</ProjectGuid>
+    <ProjectGuid>{015A3B14-BCFA-4C75-8ED0-1757034EC4FE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Exercices_Repetition</RootNamespace>
+    <RootNamespace>_ChiffreRomain</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>_Exercices_Repetition</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -150,8 +149,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Exercices_Repetition.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="_ChiffreRomain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

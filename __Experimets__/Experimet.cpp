@@ -1,16 +1,17 @@
 #include <iostream>
 #include <climits>
+#include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
 int main()
 {
-	bool b = false;
 	int n = 0;
-
-	if (n == 0) b = true; else b = false;
-	cout << b << endl;
-
-	b = !n;
-	cout << b << endl;
+	
+	for (unsigned int i = 0; i < 1000; i++)
+	{
+		n = rand() % 15 - 3;
+		cout << n << endl;
+	}
 }

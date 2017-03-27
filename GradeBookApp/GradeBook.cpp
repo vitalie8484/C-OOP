@@ -5,11 +5,7 @@
 using namespace std;
 
 GradeBook::GradeBook(string name) 
-	: aCount(0),
-	  bCount(0),
-	  cCount(0),
-	  dCount(0),
-	  fCount(0)
+	: maximumGrade(0)
 {
 	setCourseName(name);
 }
@@ -40,90 +36,35 @@ void GradeBook::displayMessage() const
 
 void GradeBook::inputGrades()
 {
-	int grade;
+	int grade1;
+	int grade2;
+	int grade3;
 
-	cout << "Enter the letter grades." << endl
-		<< "Enter the EOF character to end input." << endl;
+	cout << "Enter three integer grades: ";
+	cin >> grade1 >> grade2 >> grade3;
 
-	while ((grade = cin.get()) != EOF)
+	maximumGrade = maximum(grade1, grade2, grade3);
+}
+
+int GradeBook::maximum(int x, int y, int z) const
+{
+	int maximumValue = x;
+
+	if (maximumValue < y)
 	{
-		switch (grade)
-		{
-			case 'A':
-			case 'a':
-				++aCount;
-				break;
+		maximumValue = y;
 
-			case 'B':
-			case 'b':
-				++bCount;
-				break;
-
-			case 'C':
-			case 'c':
-				++cCount;
-				break;
-
-			case 'D':
-			case 'd':
-				++dCount;
-				break;
-
-			case 'F':
-			case 'f':
-				++fCount;
-				break;
-
-			case '\n':
-			case '\t':
-			case ' ':
-				break;
-
-			default:
-				cout << "Incorect letter grade entered."
-					<< " Enter a new grade." << endl;
-				break;
-		}
 	}
+
+	if (maximumValue < z)
+	{
+		maximumValue = z;
+	}
+
+	return maximumValue;
 }
 
 void GradeBook::displayGradeReport() const
 {
-	cout << "\n\nNumber of students who received each letter grade:"
-		<< "\nA: " << aCount
-		<< "\nB: " << bCount
-		<< "\nC: " << cCount
-		<< "\nD: " << dCount
-		<< "\nF: " << fCount
-		<< endl;
+	cout << "Maximum of grades entered: " << maximumGrade << endl;
 }
-
-//void GradeBook::determineClassAverage() const
-//{
-//	int total = 0;
-//	unsigned int gradeCounter = 0;
-//
-//	cout << "Enter grade or -1 to quit: ";
-//	int grade = 0;
-//	cin >> grade;
-//
-//	while (grade != -1)
-//	{
-//		total = total + grade;
-//		gradeCounter = gradeCounter + 1;
-//
-//		cout << "Enter grade or -1 to quite: ";
-//		cin >> grade;
-//	}
-//
-//	if (gradeCounter != 0)
-//	{
-//		double avarage = static_cast<double>(total) / gradeCounter;
-//
-//		cout << "\nTotal of all " << gradeCounter << " grades entered is " << total << endl;
-//		cout << setprecision(2) << fixed;
-//		cout << "Class average is " << avarage << endl;
-//	}
-//	else
-//		cerr << "No grades where entered" << endl;	
-//}

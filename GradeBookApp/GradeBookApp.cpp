@@ -7,7 +7,7 @@
 
 int main()
 {
-	GradeBook myGradeBook("C++ Programing");
+	GradeBook myGradeBook("C++ Programming");
 
 	myGradeBook.displayMessage();
 	myGradeBook.inputGrades();

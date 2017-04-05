@@ -2,16 +2,28 @@
 #include <climits>
 #include <cmath>
 #include <cstdlib>
+#include <string>
+#include "Header1.h"
+#include "ClassExample.h"
 
 using namespace std;
 
+int ClassExample::staticGlobalInt = 1;
+
 int main()
-{
-	int n = 0;
-	
-	for (unsigned int i = 0; i < 1000; i++)
-	{
-		n = rand() % 15 - 3;
-		cout << n << endl;
-	}
+{	
+	ClassExample example1;
+	ClassExample example2;
+	ClassExample example3;
+
+	example1.localMethodIncrementAndShow();
+
+	example2.localMethodIncrementAndShow();
+	example2.localMethodIncrementAndShow();
+
+	example3.localMethodIncrementAndShow();
+	example3.localMethodIncrementAndShow();
+	example3.localMethodIncrementAndShow();
+
+	return 0;
 }

@@ -24,10 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ClassExample.h">
+    <ClInclude Include="GradeBook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +32,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Experimet.cpp">
+    <ClCompile Include="GradeBook7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClassExample.cpp">
+    <ClCompile Include="GradeBook.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

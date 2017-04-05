@@ -1,22 +1,24 @@
-#include <string>
 #include <array>
+#include <string>
 
 class GradeBook
 {
 public:
 	static const size_t students = 10;
+	static const size_t tests = 3;
 
-	explicit GradeBook(const std::string &, const std::array<int, students> &);
+	GradeBook(const std::string &, std::array<std::array<int, tests>, students> &);
+
 	void setCourseName(const std::string &);
 	std::string getCourseName() const;
 	void displayMessage() const;
 	void processGrades() const;
 	int getMinimum() const;
 	int getMaximum() const;
-	double getAverage() const;
+	double getAverage(const std::array<int, tests> &) const;
 	void outputBarChart() const;
 	void outputGrades() const;
 private:
 	std::string courseName;
-	std::array<int, students> grades;
-};
+	std::array<std::array<int, tests>, students> grades;
+}; 

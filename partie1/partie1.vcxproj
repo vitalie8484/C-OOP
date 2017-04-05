@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9EB757DC-4A18-463C-99FD-D4DAAC51AA8D}</ProjectGuid>
+    <ProjectGuid>{7F2FD2C4-E26B-4100-A6D9-05BA1F3C9458}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>__Experimets__</RootNamespace>
+    <RootNamespace>partie1</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,15 +145,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClassExample.h" />
-    <ClInclude Include="Header1.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ClassExample.cpp" />
+    <ClCompile Include="partie1.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Experimet.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

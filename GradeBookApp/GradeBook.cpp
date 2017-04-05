@@ -4,24 +4,15 @@
 
 using namespace std;
 
-GradeBook::GradeBook(string name) 
-	: maximumGrade(0)
+GradeBook::GradeBook(const string &name, const array<int, students> &gradesArray) 
+	: courseName(name), grades(gradesArray)
 {
-	setCourseName(name);
+
 }
 
-void GradeBook::setCourseName(string name)
+void GradeBook::setCourseName(const string &name)
 {
-	if (name.size() <= 25)
-	{
-		courseName = name;
-	}
-	else
-	{
-		courseName = name.substr(0, 25);
-		cerr << "Name \"" << name << "\" exceeded maximum length (25). \n"
-			<< "Limiting courseName to first 25 characters.\n" << endl;
-	}
+	courseName = name;
 }
 
 string GradeBook::getCourseName() const
@@ -31,40 +22,102 @@ string GradeBook::getCourseName() const
 
 void GradeBook::displayMessage() const
 {
-	cout << "Welcome to the grade book for " << getCourseName() << "!\n" << endl;
+	cout << "Welcome to the grade book for " << getCourseName() << "!" << endl;
 }
 
-void GradeBook::inputGrades()
+void GradeBook::processGrades() const
 {
-	int grade1;
-	int grade2;
-	int grade3;
+	outputGrades();
+	cout << setprecision(2) << fixed;
+	cout << "\nClass avarage is " << getAverage() << endl;
 
-	cout << "Enter three integer grades: ";
-	cin >> grade1 >> grade2 >> grade3;
+	cout << "Lowest grade is " << getMinimum() << "\nHighest grade is " << getMaximum() << endl;
 
-	maximumGrade = maximum(grade1, grade2, grade3);
+	outputBarChart();
 }
 
-int GradeBook::maximum(int x, int y, int z) const
+int GradeBook::getMinimum() const
 {
-	int maximumValue = x;
+	int lowGrade = 100;
 
-	if (maximumValue < y)
+	for (int grade : grades)
 	{
-		maximumValue = y;
-
+		if (grade < lowGrade)
+		{
+			lowGrade = grade;
+		}
 	}
 
-	if (maximumValue < z)
-	{
-		maximumValue = z;
-	}
-
-	return maximumValue;
+	return lowGrade;
 }
 
-void GradeBook::displayGradeReport() const
+int GradeBook::getMaximum() const
 {
-	cout << "Maximum of grades entered: " << maximumGrade << endl;
+	int highGrade = 0;
+	 
+	for (int grade : grades)
+	{
+		if (grade > highGrade)
+		{
+			highGrade = grade;
+		}
+	}
+
+	return highGrade;
+}
+
+double GradeBook::getAverage() const
+{
+	int total = 0;
+
+	for (int grade : grades)
+	{
+		total += grade;
+	}
+
+	return static_cast<double>(total) / grades.size();
+}
+
+void GradeBook::outputBarChart() const
+{
+	cout << "\nGrade distribution:" << endl;
+
+	const size_t frequencySize = 11;
+	array<unsigned int, frequencySize> frequency = {};
+
+	for (int grade : grades)
+	{
+		++frequency[grade / 10];
+	}
+
+	for (size_t count = 0; count < frequencySize; ++count)
+	{
+		if (0 == count)
+		{
+			cout << "  0-9:";
+		}
+		else if (10 == count)
+		{
+			cout << "  100:";
+		}
+		else
+		{
+			cout << count * 10 << "-" << (count * 10) + 9 << ":";
+		}
+
+		for (size_t stars = 0; stars < frequency[count]; ++stars)
+		{
+			cout << "*";
+		}
+
+		cout << endl;
+	}
+}
+
+void GradeBook::outputGrades() const
+{
+	for (size_t student = 0; student < grades.size(); ++student)
+	{
+		cout << "Student " << setw(2) << student + 1 << ": " << setw(3) << grades[student] << endl;
+	}
 }

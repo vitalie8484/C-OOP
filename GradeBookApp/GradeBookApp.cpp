@@ -1,16 +1,15 @@
-// GradeBookApp.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
+#include <array>
 #include "GradeBook.h"
-
+using namespace std;
 
 int main()
 {
-	GradeBook myGradeBook("C++ Programming");
+	const array<int, GradeBook::students> grades = 
+	{87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
+	string courseName = "Instruction to C++ Programming";
 
+	GradeBook myGradeBook(courseName, grades);
 	myGradeBook.displayMessage();
-	myGradeBook.inputGrades();
-	myGradeBook.displayGradeReport();
+	myGradeBook.processGrades();
 }
 

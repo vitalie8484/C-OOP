@@ -21,7 +21,7 @@ string GradeBook::getCourseName() const
 
 void GradeBook::displayMessage() const
 {
-	cout << "Welcome to the grade book for \"" << getCourseName << "\"!" << endl;
+	cout << "Welcome to the grade book for \"" << getCourseName() << "\"!" << endl;
 }
 
 void GradeBook::processGrades() const
@@ -127,21 +127,19 @@ void GradeBook::outputGrades() const
 	cout << setw(12) << "";
 	for (size_t test = 0; test < tests; ++test)
 	{
-		cout << "Test " << test + 1 << " ";
+		cout << "Test_" << test + 1 << " ";
 	}
 	cout << "Average" << endl;
 
 	for (size_t student = 0; student < grades.size(); student++)
 	{
-		cout << "Student " << setw(2) << student + 1;
+		cout << "Student " << setw(3) << student + 1;
 
 		for (size_t test = 0; test < grades[student].size(); test++)
 		{
-			cout << setw(8) << grades[student][test];
-
-			double average = getAverage(grades[student]);
-
-			cout << setw(9) << setprecision(2) << fixed << average << endl;
+			cout << setw(7) << grades[student][test];
 		}
+		double average = getAverage(grades[student]);
+		cout << setw(8) << setprecision(2) << fixed << average << endl;
 	}
 }

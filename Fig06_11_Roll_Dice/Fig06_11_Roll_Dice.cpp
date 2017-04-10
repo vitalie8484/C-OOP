@@ -69,4 +69,3 @@ unsigned int rollDice()
 	cout << "Player rolled " << die1 << " + " << die2 << " = " << sum << endl;
 	return sum;
 }
-

@@ -70,7 +70,7 @@ int main()
 								currentColumn = currColumn;
 								accessible = accessibility[currRow][currColumn];
 								foundMove = true;
-							}							
+							}
 						}
 					}
 
@@ -88,18 +88,18 @@ int main()
 		}
 	}
 
-	
+
 
 	/*for (auto const &row : board)
 	{
-		for (auto const &val : row)
-		{
-			cout << setw(3) << val << " ";
-		}
-		cout << endl << endl;
+	for (auto const &val : row)
+	{
+	cout << setw(3) << val << " ";
+	}
+	cout << endl << endl;
 	}*/
 
-    return 0;
+	return 0;
 }
 
 int lookAhead(int const &nextRow, int const & nextColumn)

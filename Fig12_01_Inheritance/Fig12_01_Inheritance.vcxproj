@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A36C0C5E-EB07-42DB-AC6F-2D8886C6715F}</ProjectGuid>
+    <ProjectGuid>{BB6954D8-ABF7-4F58-A1B5-53F04565D808}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Snake</RootNamespace>
+    <RootNamespace>Fig12_01_Inheritance</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Fig12_01_Inheritance_virtual</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -71,8 +72,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\vital\Desktop\BdeB\420_J03_BB\1795219\Snake\fltk\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\vital\Desktop\BdeB\420_J03_BB\1795219\Snake\fltk\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -94,7 +93,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>fltkd.lib;fltkformsd.lib;fltkgld.lib;fltkimagesd.lib;fltkjpegd.lib;fltkpngd.lib;fltkzlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -145,25 +143,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Apple.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Snake.cpp" />
-    <ClCompile Include="SnakeWindow.cpp" />
-    <ClCompile Include="Vector2d.cpp" />
-    <ClCompile Include="Vector2i.cpp" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="BasePlusCommissionEmployee.h" />
+    <ClInclude Include="CommissionEmployee.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Apple.h" />
-    <ClInclude Include="Defines.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Snake.h" />
-    <ClInclude Include="SnakeWindow.h" />
-    <ClInclude Include="Vector2d.h" />
-    <ClInclude Include="Vector2i.h" />
+    <ClCompile Include="BasePlusCommissionEmployee.cpp" />
+    <ClCompile Include="CommissionEmployee.cpp" />
+    <ClCompile Include="Fig12_01_Inheritance.cpp" />
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

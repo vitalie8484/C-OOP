@@ -1,9 +1,8 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
-	for (size_t i = 0; i <= 0; i++)
-	{
-		std::cout << "adsgfdsfg dsgf dsgf" << std::endl;
-	}
+	const char pPtr[] = {'s', 'd'};
+	cout << pPtr << endl;
 }

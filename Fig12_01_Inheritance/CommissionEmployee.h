@@ -12,6 +12,8 @@ public:
 		double = 0.0, 
 		double = 0.0);
 
+	virtual ~CommissionEmployee() {};
+
 	void setFirstName(const std::string&);
 	std::string getFirstName() const;
 

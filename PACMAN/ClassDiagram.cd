@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Game">
+    <Position X="8.25" Y="8" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAACAAAAhIAAAAAAAAAAAiAAAIAAAAAAAIAAIA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject">
+    <Position X="6.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAIAACAIEgAAAAAAIAAAAAAAAgCAIAgACAIAAAA=</HashCode>
+      <FileName>GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameWindow">
+    <Position X="11.75" Y="8" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAgBAgAAAAAAAAIAAAAEAAAAAAAIAAACAAIAAAQ=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ghost">
+    <Position X="0.5" Y="11.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAEAAAAAAA=</HashCode>
+      <FileName>Ghost.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HUD">
+    <Position X="0.5" Y="13.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HUD.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Maze">
+    <Position X="8" Y="12" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>MBAAgACABAAQAgCQAICAAAAAIAAAABYAAAAAAgIAAAA=</HashCode>
+      <FileName>Maze.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovingGameObject">
+    <Position X="0.5" Y="5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>CgAAgAAAAIEAIACCACAAAgAAAAABAQCSIACEAQAAIAA=</HashCode>
+      <FileName>MovingGameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacDots">
+    <Position X="5.75" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>PacDots.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman">
+    <Position X="4" Y="11.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAYAAAAAQAAAAA=</HashCode>
+      <FileName>Pacman.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Portal">
+    <Position X="12.75" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEQBAAQ=</HashCode>
+      <FileName>Portal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector2i">
+    <Position X="12.75" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Vector2i.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wall">
+    <Position X="9.25" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAA=</HashCode>
+      <FileName>Wall.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GAME_EVENT">
+    <Position X="3.25" Y="15" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAQAAAAAAAAAAAAAAAAIAAAAAAAEBAAAAAAAAAAA=</HashCode>
+      <FileName>Defines.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DIRECTION">
+    <Position X="1" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAABAAAQAAAAAAAAgAAAQAAAAQAAAAA=</HashCode>
+      <FileName>Defines.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

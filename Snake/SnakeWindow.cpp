@@ -10,7 +10,7 @@
 const int WINDOW_SIZE = 800;
 
 //According to documentation, repeat_timeout has a fair degree of accuracy up to 60 fps. Let's run at 30fps.
-const double FRAME_DURATION_SECONDS = 1.0/30.0;
+const double FRAME_DURATION_SECONDS = 1.0/60.0;
 
 void OnTimeCB(void*);
 double totalTime = 0;

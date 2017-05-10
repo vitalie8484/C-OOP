@@ -16,6 +16,7 @@ class Pacman : public MovingGameObject
 public:
     Pacman(Maze* maze);
     inline bool IsDead() const { return dead; };
+    void setDead(bool b) { dead = b; };
 
 private:
     void OnCollisionWithWall(const Wall* wall);

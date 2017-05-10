@@ -14,7 +14,10 @@ const int WINDOW_SIZE = 810;//Make sure it fits game's size.
 void OnTimeCB(void*);
 double totalTime = 0;
 
-GameWindow::GameWindow() : Fl_Window(WINDOW_SIZE, WINDOW_SIZE)
+GameWindow::GameWindow() : 
+	Fl_Window(WINDOW_SIZE, WINDOW_SIZE),
+	hud(&game),
+	game(&hud)
 {
     Fl::add_timeout(FRAME_DURATION_SECONDS, OnTimeCB, this);
 }

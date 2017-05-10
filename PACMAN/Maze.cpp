@@ -13,11 +13,13 @@
 
 using namespace std;
 
-Maze::Maze(Pacman* pacman):
+Maze::Maze(Pacman* pacman, Game* game):
 pacman(pacman),
+game(game),
 size(0)
 {
     Load();
+	nbTotalDots = GetNbRemainingDots();
 }
 
 void Maze::Load()
@@ -196,6 +198,7 @@ void Maze::RemoveDot(PacDots* dot)
         if(*iter == dot)
         {
             dots.erase(iter);
+			game->setScore(nbTotalDots - GetNbRemainingDots());
             break;
         }
     }

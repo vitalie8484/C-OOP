@@ -1,20 +1,38 @@
+#include <fstream>
 #include "Game.h"
-
 #include "GameWindow.h"
 
 using namespace std;
 
-Game::Game():
-pacman(&maze),
-maze(&pacman),
-gameOver(false)
+Game::Game() :
+	pacman(&maze),
+	maze(&pacman, this),
+	gameOver(false),
+	score(0),
+	highScore(0),
+	life(0)
 {
+	Load();
 }
 
 Game::~Game()
 {
     cout << "Game DTOR" << endl;
     maze.Unload();
+}
+
+void Game::Load()
+{
+	ifstream dataFile("data.dat", ios::in);
+	if (!dataFile)
+	{
+		cerr << "Cannot load data." << endl;
+		return;
+	}
+
+	dataFile >> highScore >> life;
+
+	dataFile.close();
 }
 
 void Game::OnTime(double time, double deltaTime)
@@ -58,23 +76,60 @@ void Game::Draw(const GameWindow& windowRef) const
 
 void Game::CheckGameOverConditions()
 {
-    gameOver = maze.GetNbRemainingDots() == 0;
-    
-    if(gameOver)
-    {
-        cout << "GAME OVER - YOU WIN!" << endl;
-        return;
-    }
-    
-    gameOver = pacman.IsDead();
-    
-    if(gameOver)
-    {
-        cout << "GAME OVER - YOU LOOSE!" << endl;
-        return;
-    }
+	gameOver = maze.GetNbRemainingDots() == 0;
+
+	if (gameOver)
+	{
+		CheckHighScore();
+		cout << "GAME OVER - YOU WIN!" << endl;
+		return;
+	}
+
+	gameOver = pacman.IsDead();
+
+	if (gameOver)
+	{
+		CheckHighScore();
+		cout << "GAME OVER - YOU LOOSE!" << endl;
+		return;
+	}
 //    else
 //    {
 //        cout << "Still " << maze.GetNbRemainingDots() << " dots to collect." << endl;
 //    }
+}
+
+void Game::CheckHighScore()
+{
+	int localHighScore;
+	int localLife;
+	fstream dataFile;
+
+	dataFile.open("data.dat", ios::in);
+	if (!dataFile)
+	{
+		cerr << "Cannot load data." << endl;
+		return;
+	}
+
+	dataFile >> localHighScore >> localLife;
+
+	dataFile.close();
+
+	if (score > localHighScore)
+	{
+		dataFile.open("data.dat", ios::out);
+
+		if (!dataFile)
+		{
+			cerr << "Cannot load data." << endl;
+			return;
+		}
+
+		dataFile << score << ' ' << localLife << endl;
+
+		dataFile.close();
+	}
+
+	dataFile.close();
 }

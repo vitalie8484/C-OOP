@@ -13,11 +13,12 @@ class Ghost;
 class Pacman;
 class PacDots;
 class Portal;
+class Game;
 
 class Maze
 {
 public:
-    Maze(Pacman* pacman);
+    Maze(Pacman* pacman, Game* game);
     inline Vector2i GetSize() const { return Vector2i(size, size); };
     void Draw(const GameWindow& windowRef) const;
     void PhysicStep(double currentTime, double deltaTime);
@@ -40,6 +41,9 @@ private:
     std::vector<GameObject*> mazeObjects;
     std::map<char, std::pair<Portal*, Portal*>> portals;
     unsigned int size;
+
+	Game* game;
+	int nbTotalDots;
 };
 
 #endif /* defined(__PACMAN__Maze__) */

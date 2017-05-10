@@ -5,7 +5,6 @@
 #include <FL/fl_draw.H>
 
 #include "Defines.h"
-#include "Game.h"
 
 using namespace std;
 
@@ -14,8 +13,11 @@ const int WINDOW_SIZE = 810;//Make sure it fits game's size.
 void OnTimeCB(void*);
 double totalTime = 0;
 
-GameWindow::GameWindow() : Fl_Window(WINDOW_SIZE, WINDOW_SIZE)
+GameWindow::GameWindow() : 
+	Fl_Window(WINDOW_SIZE, WINDOW_SIZE),
+	hud(&game)
 {
+	// in x seconds call OnTimeCB at infinit
     Fl::add_timeout(FRAME_DURATION_SECONDS, OnTimeCB, this);
 }
 
@@ -26,6 +28,7 @@ GameWindow::~GameWindow()
 
 int GameWindow::handle(int event)
 {
+	Fl_Window::handle(event);
     switch(event)
     {
         case FL_KEYDOWN:

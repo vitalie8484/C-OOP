@@ -2,7 +2,8 @@
 
 Portal::Portal()
 {
-    SetVisible(false);
+    SetVisible(true);
+	SetColor(FL_YELLOW);
 }
 
 void Portal::OnCollision(const GameObject* other)

@@ -1,0 +1,7 @@
+fltkd.lib
+fltkformsd.lib
+fltkgld.lib
+fltkimagesd.lib
+fltkjpegd.lib
+fltkpngd.lib
+fltkzlibd.lib

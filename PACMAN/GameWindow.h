@@ -21,8 +21,8 @@ public:
     void DrawInnerTileAt(Vector2i pos, double pct, Fl_Color color) const;
     
     //Overrides Fl_Window
-    int handle(int event);
-    void draw();
+    int handle(int event) override;
+    void draw() override;
     
 private:
     void ProcessKeyDown(int key);
